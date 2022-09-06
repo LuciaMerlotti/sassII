@@ -1,0 +1,18 @@
+h1 colores modificados desde _listas.scss
+
+mixin en bannnerImage
+
+extend en el reseteo de las propiedades de css extend %inicio en propiedades de %subtitulo
+
+mapas usado en footer
+
+
+
+
+
+
+
+
+
+
+

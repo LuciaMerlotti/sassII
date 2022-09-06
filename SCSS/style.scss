@@ -1,0 +1,100 @@
+//variables
+
+@import "utilities/variables";
+@import "utilities/mapas";
+@import "utilities/listas";
+@import "utilities/mixin";
+@import "utilities/extend";
+
+*{
+   @extend %inicio;
+}
+body{
+
+        .fondo{
+         
+        background-color: $color-main;
+
+        }
+
+     header{
+
+        .bannerImage{
+
+            @include medidas(100%,150px);      
+        }
+        
+        .banner{
+
+            line-height: 0;
+            
+
+                h1{
+                    font-weight: bolder;
+                    color: nth($list: $colores, $n:1);
+                }
+        }
+
+        .title{
+
+            position: relative;
+            top: 100px;
+            left: 30px;
+        }
+    }
+     main{
+
+         .subtitulo{
+                
+            @extend %subtitulo;
+                          
+         }
+
+         hr {
+
+            @include box-model;             
+         }
+
+         .row:after {
+            content: "";
+            display: table;
+            clear: both;
+         }
+                
+         .column {
+        
+            float: left;
+            width: 45%;
+            margin: 30px 0px 30px 30px;
+            
+         }
+        
+         .column1 {
+        
+            float: right;
+            width: 50%;
+            margin: 30px 50px 0px 0px;
+        
+         }        
+         
+         .nuestrosTrabajos{
+              margin-top: 100px;              
+              text-align: justify;              
+         }                    
+                   
+        }
+
+     footer{
+
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: map-get($map: $footer, $key: bg-footer);
+            color:map-get($map: $footer, $key: color-footer);
+            border:map-get($map: $footer, $key: border-footer);
+            font-size: map-get($map: $footer, $key: font-footer);
+                
+        }
+    
+}
